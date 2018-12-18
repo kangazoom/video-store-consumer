@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Movie from './Movie';
 
 class Library extends React.Component {
   constructor() {
@@ -11,21 +12,27 @@ class Library extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('localhost:3000/movies')
+    axios.get('http://localhost:3000/movies')
       .then((response) => {
-        console.log('Yay!');
-        console.log(response);
+        this.setState({movies: response.data})
       })
       .catch((error) => {
-        console.log('Boo!');
-        console.log(error);
+        this.setState({error: error.message})
       })
   }
 
   render() {
+    const movieCollection = this.state.movies.map((movie) => {
+      return <Movie key={movie.id}
+      id={movie.id}
+      title={movie.title}
+      releaseDate={movie.release_date}
+      imageUrl={movie.image_url} />
+    });
     return (
       <section>
         <h2>This is Library.</h2>
+        {movieCollection}
       </section>
     )
   }

@@ -48,7 +48,24 @@ class MovieSearchForm extends React.Component {
    }
 
    addMovieToLibrary = (movieId) => {
-     console.log(`In MovieSearchForm ${movieId}`);
+     const clickedMovie = this.state.movies.find( movie => movie.external_id === movieId)
+
+     const movieData = {
+       title: clickedMovie.title,
+       overview: clickedMovie.overview,
+       release_date: clickedMovie.release_date,
+       inventory: 10,
+       image_url: clickedMovie.image_url.slice(31),
+       external_id: clickedMovie.external_id
+     }
+
+     axios.post('http://localhost:3000/movies/', movieData)
+      .then((response) => {
+        console.log(`Sucessfully added ${movieData.title} to rental library with id ${response.data.id}`);
+      })
+      .catch((error) => {
+        console.log(`Error: ${error.message}`);
+      })
    }
 
   render() {

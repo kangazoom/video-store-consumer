@@ -27,7 +27,7 @@ class App extends Component {
   selectCustomerForRental = (customerObject) => {
     console.log(`In App: ${customerObject.id} with ${customerObject.name}`);
     this.setState({
-      selectedCustomer: customerObject.name
+      selectedCustomer: customerObject
     })
   }
 

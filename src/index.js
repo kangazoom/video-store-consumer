@@ -11,7 +11,7 @@ import registerServiceWorker from './registerServiceWorker';
 const routing = (
   <Router>
     <div>
-      <ul>
+      <ul className="nav-menu">
         <li>
           <Link to="/">Home</Link>
         </li>

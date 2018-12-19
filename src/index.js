@@ -13,16 +13,24 @@ const routing = (
     <div>
       <ul className="nav-menu">
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">
+            <button type="button" className="btn btn-secondary btn-lg">Home</button>
+          </Link>
         </li>
         <li>
-          <Link to="/search">Search</Link>
+          <Link to="/search">
+            <button type="button" className="btn btn-secondary btn-lg">Search</button>
+          </Link>
         </li>
         <li>
-          <Link to="/library">Library</Link>
+          <Link to="/library">
+            <button type="button" className="btn btn-secondary btn-lg">Library</button>
+          </Link>
         </li>
         <li>
-          <Link to="/customers">Customers</Link>
+          <Link to="/customers">
+            <button type="button" className="btn btn-secondary btn-lg">Customers</button>
+          </Link>
         </li>
       </ul>
       <Route path="/" component={App} />

@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import Selection from './Selection';
 import './NavMenu.css';
 
-const NavMenu = () => {
+const NavMenu = (props) => {
   return (
     <div>
       <ul className="nav-menu">
@@ -25,6 +26,9 @@ const NavMenu = () => {
           <Link to="/customers">
             <button type="button" className="btn btn-secondary btn-lg">Customers</button>
           </Link>
+        </li>
+        <li>
+          <Selection selectedMovie={props.selectedMovie} selectedCustomer={props.selectedCustomer} />
         </li>
       </ul>
     </div>

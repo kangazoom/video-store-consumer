@@ -16,25 +16,25 @@ class App extends Component {
   }
 
   selectMovieForRental = (movieTitle) => {
+    console.log(this.state.selectedMovie);
     console.log(`In App: ${movieTitle}`);
-    const clickedMovie =
-    this.setState = ({
+    this.setState({
       selectedMovie: movieTitle
     })
+    console.log(this.state.selectedMovie);
   }
 
-  selectCustomerForRental = (customerID) => {
-    console.log(`In App: ${customerID}`);
-    const clickedCustomer =
-    this.setState = ({
-      selectedCustomer: customerID
+  selectCustomerForRental = (customerObject) => {
+    console.log(`In App: ${customerObject.id} with ${customerObject.name}`);
+    this.setState({
+      selectedCustomer: customerObject.name
     })
   }
 
   render() {
     return (
       <div>
-        <NavMenu />
+        <NavMenu selectedMovie={this.state.selectedMovie} selectedCustomer={this.state.selectedCustomer}/>
         <Route path="/search" component={MovieSearchForm} />
         <Route exact path="/library" render={(props) => (
           <Library selectedMovieCB={this.selectMovieForRental} />

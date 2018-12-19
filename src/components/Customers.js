@@ -29,8 +29,8 @@ class Customers extends Component {
 
   findCustomerForRental = (customerID) => {
     console.log(`In CustomerS: ${customerID}`);
-    // const clickedCustomer = this.state.movies.find( movie => movie.id === movieId)
-    this.props.selectedCustomerCB(customerID)
+    const clickedCustomer = this.state.customers.find( customer => customer.id === customerID)
+    this.props.selectedCustomerCB(clickedCustomer)
   }
 
   render() {

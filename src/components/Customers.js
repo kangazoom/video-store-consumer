@@ -3,8 +3,8 @@ import Customer from './Customer';
 import axios from 'axios';
 
 class Customers extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       customers: []
@@ -27,6 +27,11 @@ class Customers extends Component {
     });
   }
 
+  findCustomerForRental = (customerID) => {
+    console.log(`In CustomerS: ${customerID}`);
+    // const clickedCustomer = this.state.movies.find( movie => movie.id === movieId)
+    this.props.selectedCustomerCB(customerID)
+  }
 
   render() {
 
@@ -46,6 +51,8 @@ class Customers extends Component {
         phone: customer.phone,
         account_credit: customer.account_credit,
         movies_checked_out_count: customer.movies_checked_out_count,
+        customerCB: this.findCustomerForRental,
+        buttonText: 'Select for Rental',
       }
 
       return <Customer customer={formattedCustomer} key={formattedCustomer.key}/>

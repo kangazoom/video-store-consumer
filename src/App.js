@@ -23,6 +23,14 @@ class App extends Component {
     })
   }
 
+  selectCustomerForRental = (customerID) => {
+    console.log(`In App: ${customerID}`);
+    const clickedCustomer =
+    this.setState = ({
+      selectedCustomer: customerID
+    })
+  }
+
   render() {
     return (
       <div>
@@ -31,7 +39,9 @@ class App extends Component {
         <Route exact path="/library" render={(props) => (
           <Library selectedMovieCB={this.selectMovieForRental} />
         )}/>
-        <Route path="/customers" component={Customers} />
+      <Route exact path="/customers" render={(props) => (
+        <Customers selectedCustomerCB={this.selectCustomerForRental} />
+      )}/>
       </div>
     );
   }

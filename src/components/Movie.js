@@ -8,7 +8,6 @@ const Movie = (props) => {
   }
 
 
-
   return (
 
 

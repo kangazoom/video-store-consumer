@@ -27,7 +27,8 @@ class Library extends React.Component {
       id={movie.id}
       title={movie.title}
       releaseDate={movie.release_date}
-      imageUrl={movie.image_url} />
+      imageUrl={movie.image_url}
+      buttonText='Select for Rental' />
     });
     return (
       <section>

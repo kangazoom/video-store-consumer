@@ -14,7 +14,7 @@ const Movie = (props) => {
       <h4>{props.releaseDate}</h4>
       <button
         onClick={onMovieClick}>
-        Select for Rental
+        {props.buttonText}
       </button>
     </div>
   )
@@ -26,6 +26,7 @@ Movie.propTypes = {
   releaseDate: PropTypes.string,
   selectMovieCallback: PropTypes.func,
   id: PropTypes.number,
+  buttonText: PropTypes.string,
 };
 
 export default Movie;

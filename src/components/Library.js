@@ -21,6 +21,10 @@ class Library extends React.Component {
       })
   }
 
+  selectMovieForRental = (movieId) => {
+    console.log(`In Library ${movieId}`);
+  }
+
   render() {
     const movieCollection = this.state.movies.map((movie) => {
       return <Movie key={movie.id}
@@ -28,6 +32,7 @@ class Library extends React.Component {
       title={movie.title}
       releaseDate={movie.release_date}
       imageUrl={movie.image_url}
+      callback={this.selectMovieForRental}
       buttonText='Select for Rental' />
     });
     return (

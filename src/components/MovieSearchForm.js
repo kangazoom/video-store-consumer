@@ -47,13 +47,18 @@ class MovieSearchForm extends React.Component {
       });
    }
 
+   addMovieToLibrary = (movieId) => {
+     console.log(`In MovieSearchForm ${movieId}`);
+   }
+
   render() {
     const searchResults = this.state.movies.map((movie, i) => {
       return <Movie key={i}
-      id={movie.id}
+      id={movie.external_id}
       title={movie.title}
       releaseDate={movie.release_date}
       imageUrl={movie.image_url}
+      callback={this.addMovieToLibrary}
       buttonText='Add to Library' />
     });
     return (

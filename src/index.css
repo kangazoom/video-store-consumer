@@ -1,11 +1,6 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 10px;
   font-family: sans-serif;
-}
-
-.nav-menu {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
+  background-color: aliceblue;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Movie from './Movie';
+import './MovieSearchForm.css';
 
 class MovieSearchForm extends React.Component {
   constructor(props) {
@@ -80,15 +81,20 @@ class MovieSearchForm extends React.Component {
     });
     return (
       <section>
-        <h2>This is Search.</h2>
-        <form onSubmit={this.onFormSubmit}>
-           <input name="title" placeholder="Movie title..." type="text"
-             value={this.state.title}
-             onChange={this.onInputChange}
-             />
-           <input type="submit" value="Search" />
-        </form>
-        {searchResults}
+        <div className="search-form-container">
+          <form onSubmit={this.onFormSubmit}>
+             <input name="title" placeholder="Movie title..." type="text"
+               className= "form-control form-control-lg search-form"
+               value={this.state.title}
+               onChange={this.onInputChange}
+               />
+             <input type="submit" value="Search" className="btn btn-outline-dark btn-lg"/>
+          </form>
+        </div>
+
+        <div className="search-results-container">
+          {searchResults}
+        </div>
       </section>
     );
   }

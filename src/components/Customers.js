@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Customer from './Customer';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 
 class Customers extends Component {
@@ -28,7 +29,6 @@ class Customers extends Component {
   }
 
   findCustomerForRental = (customerID) => {
-    console.log(`In CustomerS: ${customerID}`);
     const clickedCustomer = this.state.customers.find( customer => customer.id === customerID)
     this.props.selectedCustomerCB(clickedCustomer)
   }
@@ -43,12 +43,6 @@ class Customers extends Component {
         key: i,
         id: customer.id,
         name: customer.name,
-        registered_at: customer.registered_at,
-        address: customer.address,
-        city: customer.city,
-        state: customer.state,
-        postal_code: customer.postal_code,
-        phone: customer.phone,
         account_credit: customer.account_credit,
         movies_checked_out_count: customer.movies_checked_out_count,
         customerCB: this.findCustomerForRental,
@@ -68,5 +62,14 @@ class Customers extends Component {
     )
   }
 }
+
+Customer.propTypes = {
+  id: PropTypes.number,
+  name: PropTypes.string,
+  account_credit: PropTypes.number,
+  movies_checked_out_count: PropTypes.number,
+  customerCB: PropTypes.func,
+  buttonText: PropTypes.string,
+};
 
 export default Customers;

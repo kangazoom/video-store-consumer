@@ -19,25 +19,26 @@ const Selection = (props) => {
 
   const createNewRental = () => {
     axios.post(url)
-      .then((response) => {
-        alert(`Successfully created new rental!`);
-      })
-      .catch((error) => {
-        alert(`There has been an error. ${error}: ${error.message}`);
-      });
+    .then((response) => {
+      alert(`Successfully created new rental!`);
+      window.location.reload();
+    })
+    .catch((error) => {
+      alert(`There has been an error. ${error}: ${error.message}`);
+    });
   }
 
   return (
     <section className="selection-box">
       <div className="selection-items">
-      <p className="one-selected-item">
-        Selected Movie:
-        <span>{props.selectedMovie}</span>
-      </p>
-      <p className="one-selected-item">
-        Selected Customer:
-        <span>{props.selectedCustomer.name ? props.selectedCustomer.name : props.selectedCustomer}</span>
-      </p>
+        <p className="one-selected-item">
+          Selected Movie:
+          <span>{props.selectedMovie}</span>
+        </p>
+        <p className="one-selected-item">
+          Selected Customer:
+          <span>{props.selectedCustomer.name ? props.selectedCustomer.name : props.selectedCustomer}</span>
+        </p>
       </div>
       <button type="button"
         className="btn btn-primary btn-lg"

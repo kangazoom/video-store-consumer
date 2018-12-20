@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Customer from './Customer';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import './Customers.css'
+
 
 class Customers extends Component {
   constructor(props) {

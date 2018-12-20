@@ -6,7 +6,6 @@ const Movie = (props) => {
 
   const onMovieClick = () => {
     props.callback(props.id)
-    console.log(hi)
   }
 
 

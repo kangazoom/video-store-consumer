@@ -15,14 +15,14 @@ const Movie = (props) => {
 
     <div className="card width">
       <img className="card-img-top" src={props.imageUrl} alt={props.title} />
-      <div className="card-body">
-        <h2 className="card-title">{props.title}</h2>
-        <h4 className="card-text">{props.releaseDate}</h4>
+      <div className="movie-card card-body">
         <button
           className="btn btn-secondary"
           onClick={onMovieClick}>
           {props.buttonText}
         </button>
+        <h2 className="card-title">{props.title}</h2>
+        <h4 className="card-text">{props.releaseDate}</h4>
       </div>
     </div>
   )

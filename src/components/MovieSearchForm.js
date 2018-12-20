@@ -81,13 +81,17 @@ class MovieSearchForm extends React.Component {
     });
     return (
       <section>
-        <form onSubmit={this.onFormSubmit}>
-           <input name="title" placeholder="Movie title..." type="text"
-             value={this.state.title}
-             onChange={this.onInputChange}
-             />
-           <input type="submit" value="Search" />
-        </form>
+        <div className="search-form-container">
+          <form onSubmit={this.onFormSubmit}>
+             <input name="title" placeholder="Movie title..." type="text"
+               className= "form-control form-control-lg search-form"
+               value={this.state.title}
+               onChange={this.onInputChange}
+               />
+             <input type="submit" value="Search" className="btn btn-outline-dark btn-lg"/>
+          </form>
+        </div>
+
         <div className="search-results-container">
           {searchResults}
         </div>

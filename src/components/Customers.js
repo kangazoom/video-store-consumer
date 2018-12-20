@@ -55,9 +55,8 @@ class Customers extends Component {
 
 
     return (
-      <section>
-        <h2>This is Customers.</h2>
-        <ul>{customerList}</ul>
+      <section className="customers-container">
+        {customerList}
       </section>
     )
   }

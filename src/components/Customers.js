@@ -9,7 +9,6 @@ class Customers extends Component {
 
     this.state = {
       customers: [],
-      things: 'hi'
     };
   }
 

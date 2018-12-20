@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Movie from './Movie';
+import './Library.css';
 
 class Library extends React.Component {
   constructor(props) {
@@ -40,8 +41,7 @@ class Library extends React.Component {
         buttonText='Select for Rental' />
     });
     return (
-      <section>
-        <h2>This is Library.</h2>
+      <section className="library-container">
         {movieCollection}
       </section>
     )

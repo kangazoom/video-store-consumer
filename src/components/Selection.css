@@ -1,4 +1,4 @@
-section {
+.selection-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,13 +8,13 @@ span {
   font-weight: bold;
 }
 
-.selections {
+.selection-items {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-p {
+.one-selected-item {
   display: inline-block;
   border: 2px blue solid;
   padding: 2px;

@@ -28,13 +28,13 @@ const Selection = (props) => {
   }
 
   return (
-    <section>
-      <div className="selections">
-      <p>
+    <section className="selection-box">
+      <div className="selection-items">
+      <p className="one-selected-item">
         Selected Movie:
         <span>{props.selectedMovie}</span>
       </p>
-      <p>
+      <p className="one-selected-item">
         Selected Customer:
         <span>{props.selectedCustomer.name ? props.selectedCustomer.name : props.selectedCustomer}</span>
       </p>

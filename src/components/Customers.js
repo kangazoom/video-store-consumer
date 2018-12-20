@@ -8,7 +8,8 @@ class Customers extends Component {
     super(props);
 
     this.state = {
-      customers: []
+      customers: [],
+      things: 'hi'
     };
   }
 

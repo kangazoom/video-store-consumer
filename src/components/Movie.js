@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Movie.css'
 
 const Movie = (props) => {
 
@@ -8,17 +9,21 @@ const Movie = (props) => {
   }
 
 
+
   return (
 
 
-    <div>
-      <img src={props.imageUrl} alt={props.title} />
-      <h2>{props.title}</h2>
-      <h4>{props.releaseDate}</h4>
-      <button
-        onClick={onMovieClick}>
-        {props.buttonText}
-      </button>
+    <div className="card width">
+      <img className="card-img-top" src={props.imageUrl} alt={props.title} />
+      <div className="card-body">
+        <h2 className="card-title">{props.title}</h2>
+        <h4 className="card-text">{props.releaseDate}</h4>
+        <button
+          className="btn btn-secondary"
+          onClick={onMovieClick}>
+          {props.buttonText}
+        </button>
+      </div>
     </div>
   )
 }

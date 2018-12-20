@@ -5,6 +5,7 @@ import MovieSearchForm from './components/MovieSearchForm';
 import Library from './components/Library';
 import Customers from './components/Customers';
 import './App.css';
+import PropTypes from 'prop-types';
 
 class App extends Component {
   constructor() {
@@ -46,5 +47,12 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  selectedMovie: PropTypes.object,
+  selectedCustomer: PropTypes.string,
+  selectedMovieCB: PropTypes.func,
+  selectedCustomerCB: PropTypes.func,
+};
 
 export default App;

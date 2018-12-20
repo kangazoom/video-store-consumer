@@ -8,6 +8,8 @@ const NavMenu = (props) => {
     <div>
       <ul className="nav-menu">
         <li>
+        <h1>Vambuster Video</h1></li>
+        <li>
           <Link to="/">
             <button type="button" className="btn btn-secondary btn-lg">Home</button>
           </Link>

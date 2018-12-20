@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import './Selection.css';
 
 
 const Selection = (props) => {
@@ -28,13 +29,15 @@ const Selection = (props) => {
 
   return (
     <section>
-      <div>
+      <div className="selections">
+      <p>
         Selected Movie:
-        {props.selectedMovie}
-      </div>
-      <div>
+        <span>{props.selectedMovie}</span>
+      </p>
+      <p>
         Selected Customer:
-        {props.selectedCustomer.name ? props.selectedCustomer.name : props.selectedCustomer}
+        <span>{props.selectedCustomer.name ? props.selectedCustomer.name : props.selectedCustomer}</span>
+      </p>
       </div>
       <button type="button"
         className="btn btn-primary btn-lg"

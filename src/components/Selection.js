@@ -20,10 +20,10 @@ const Selection = (props) => {
   const createNewRental = () => {
     axios.post(url)
       .then((response) => {
-        console.log(`Successfully created new rental`);
+        alert(`Successfully created new rental!`);
       })
       .catch((error) => {
-        console.log('Your shit is all messed up!');
+        alert(`There has been an error. ${error}: ${error.message}`);
       });
   }
 

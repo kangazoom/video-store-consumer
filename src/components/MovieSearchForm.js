@@ -62,7 +62,7 @@ class MovieSearchForm extends React.Component {
 
      axios.post('http://localhost:3000/movies/', movieData)
       .then((response) => {
-        alert(`Sucessfully added ${movieData.title} to rental library with id ${response.data.id}`);
+        alert(`Sucessfully added ${movieData.title} to rental library!`);
       })
       .catch((error) => {
         alert(`Error: ${error.message}`);

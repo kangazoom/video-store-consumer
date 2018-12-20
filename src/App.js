@@ -17,16 +17,12 @@ class App extends Component {
   }
 
   selectMovieForRental = (movieTitle) => {
-    console.log(this.state.selectedMovie);
-    console.log(`In App: ${movieTitle}`);
     this.setState({
       selectedMovie: movieTitle
     })
-    console.log(this.state.selectedMovie);
   }
 
   selectCustomerForRental = (customerObject) => {
-    console.log(`In App: ${customerObject.id} with ${customerObject.name}`);
     this.setState({
       selectedCustomer: customerObject
     })

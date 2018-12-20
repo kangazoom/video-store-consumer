@@ -32,7 +32,10 @@ class App extends Component {
     })
   }
 
+
   render() {
+    let location = this.props.location.pathname
+
     return (
       <div>
         <NavMenu selectedMovie={this.state.selectedMovie} selectedCustomer={this.state.selectedCustomer}/>
@@ -43,6 +46,12 @@ class App extends Component {
       <Route exact path="/customers" render={(props) => (
         <Customers selectedCustomerCB={this.selectCustomerForRental} />
       )}/>
+
+    {location==='/' ? <div className="splash-container">
+    <img src="http://i65.tinypic.com/15yxd92.jpg" alt="woman with popcorn" />
+    <h1 className="intro-heading">Hello and welcome to Vambuster Video!</h1>
+    <h1 className="intro-more">You are a very valued employee.</h1>
+    </div> : ''}
       </div>
     );
   }

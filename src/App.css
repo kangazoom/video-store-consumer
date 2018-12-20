@@ -1,0 +1,23 @@
+.splash-container {
+  position: relative;
+  text-align: center;
+  color: #333333;
+}
+
+img {
+  max-height: 100%;
+  width: 100%;
+}
+
+.intro-heading {
+  position: absolute;
+  top: 5%;
+  background: #ffffff
+}
+
+.intro-more {
+  position: absolute;
+  top: 20%;
+  right: 0%;
+  background: #ffffff
+}

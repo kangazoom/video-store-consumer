@@ -1,9 +1,9 @@
 # Vambuster Video
 - This was a full-stack pair project completed during Ada Developers Academy.
 - This repo contains the frontend.
-- You can find the backend [https://github.com/kangazoom/VideoStoreConsumer-API](here).
-- You can watch a demo of a user searching for a video and adding it to the video library inventory [https://drive.google.com/open?id=14xY_-0M-JLJS0f__sS3Laatsf8UiZhqs](here).
-- You can watch a demo of a user checking out a video rental to a customer [https://drive.google.com/open?id=1rgfBaCAdBT9Cx1h1kTKVCMdh92-3lcK9](here).
+- You can find the backend [here](https://github.com/kangazoom/VideoStoreConsumer-API).
+- You can watch a demo of a user searching for a video and adding it to the video library inventory [here](https://drive.google.com/open?id=14xY_-0M-JLJS0f__sS3Laatsf8UiZhqs).
+- You can watch a demo of a user checking out a video rental to a customer [here](https://drive.google.com/open?id=1rgfBaCAdBT9Cx1h1kTKVCMdh92-3lcK9).
 - I have left the assignment in-tact below.
 
 ## Video Store Consumer
